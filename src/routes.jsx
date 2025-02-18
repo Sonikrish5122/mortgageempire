@@ -1,6 +1,7 @@
-import { Home, Profile, SignIn, SignUp} from "@/pages";
+import { Home,SignUp} from "@/pages";
 import HomeBuyer from "./pages/home-buyer";
 import Services from "./pages/services";
+import MortgageCalculator from "./pages/mortgage-caclulator";
 
 export const routes = [
   {
@@ -19,29 +20,30 @@ export const routes = [
     element: <Services />,
   },
   {
-    name: "Smsf",
-    element: <SignIn />,
+    name: "Mortgage Caclulator",
+    path: "/mortgage-calculator",
+    element: <MortgageCalculator />,
   },
-  {
-    name: "Refinance",
-    element: <SignUp />,
-  },
-  {
-    name: "loan",
-    element: "",
-  },
-  {
-    name: "loan calculator",
-    element: <SignUp />,
-  },
-  {
-    name: "become a broker",
-    element: <SignUp />,
-  },
-  {
-    name: "meet advisor",
-    element: <SignUp />,
-  },
+  // {
+  //   name: "Refinance",
+  //   element: <SignUp />,
+  // },
+  // {
+  //   name: "loan",
+  //   element: "",
+  // },
+  // {
+  //   name: "loan calculator",
+  //   element: <SignUp />,
+  // },
+  // {
+  //   name: "become a broker",
+  //   element: <SignUp />,
+  // },
+  // {
+  //   name: "meet advisor",
+  //   element: <SignUp />,
+  // },
   
 ];
 

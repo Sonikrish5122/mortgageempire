@@ -67,12 +67,7 @@ export function HomeBuyer() {
                 <div className="container mx-auto">
                     <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
                         {FirstHomeBuyerGuide.map(({ color, title, icon, description }) => (
-                            <motion.div 
-                                key={title} 
-                                initial={{ opacity: 0, y: 50 }} 
-                                animate={{ opacity: 1, y: 0 }} 
-                                transition={{ duration: 0.8 }}
-                            >
+                            
                                 <FeatureCard
                                     color={color}
                                     title={title}
@@ -82,7 +77,7 @@ export function HomeBuyer() {
                                     description={description}
                                     cardClassName='shadow-gray-500'
                                 />
-                            </motion.div>
+                           
                         ))}
                     </div>
                 </div>
@@ -112,12 +107,6 @@ export function HomeBuyer() {
                 <div className="max-w-7xl container mx-auto">
                     <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
                         {FirstHomeBuyerGuide.map(({ color, title, icon, description }) => (
-                            <motion.div 
-                                key={title} 
-                                initial={{ opacity: 0, y: 50 }} 
-                                animate={{ opacity: 1, y: 0 }} 
-                                transition={{ duration: 0.8 }}
-                            >
                                 <FeatureCard
                                     color={color}
                                     title={title}
@@ -127,7 +116,6 @@ export function HomeBuyer() {
                                     description={description}
                                     cardClassName="shadow-gray-500"
                                 />
-                            </motion.div>
                         ))}
                     </div>
                 </div>
