@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import {
   Card,
   CardBody,
@@ -24,37 +25,58 @@ export function Home() {
         <div className="max-w-8xl container relative mx-auto">
           <div className="flex flex-wrap items-center">
             <div className="ml-auto mr-auto w-full px-4 text-center lg:w-8/12">
-              <Typography
-                variant="h1"
-                color="white"
-                className="mb-6 font-black"
+              <motion.div 
+                initial={{ opacity: 0, y: -50 }} 
+                animate={{ opacity: 1, y: 0 }} 
+                transition={{ duration: 1 }}
               >
-                Your home ownership journey starts with us.
-              </Typography>
-              <Typography variant="lead" color="white" className="opacity-80">
-                We make buying a home simple and stress-free with expert mortgage solutions. Explore competitive rates, flexible loan options, and personalized guidance—all designed to help you secure your dream home with confidence.
-              </Typography>
+                <Typography variant="h1" color="white" className="mb-6 font-black">
+                  Your home ownership journey starts with us.
+                </Typography>
+              </motion.div>
+              <motion.div 
+                initial={{ opacity: 0, y: -30 }} 
+                animate={{ opacity: 1, y: 0 }} 
+                transition={{ duration: 1, delay: 0.3 }}
+              >
+                <Typography variant="lead" color="white" className="opacity-80">
+                  We make buying a home simple and stress-free with expert mortgage solutions. Explore competitive rates, flexible loan options, and personalized guidance—all designed to help you secure your dream home with confidence.
+                </Typography>
+              </motion.div>
             </div>
           </div>
         </div>
       </div>
+
       <section className="-mt-32 bg-white px-4 pb-20 pt-4">
         <div className="container mx-auto">
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
             {featuresData.map(({ color, title, icon, description }) => (
-              <FeatureCard
+              <motion.div
                 key={title}
-                color={color}
-                title={title}
-                icon={React.createElement(icon, {
-                  className: "w-5 h-5 text-white",
-                })}
-                description={description}
-              />
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+              >
+                <FeatureCard
+                  color={color}
+                  title={title}
+                  icon={React.createElement(icon, {
+                    className: "w-5 h-5 text-white",
+                  })}
+                  description={description}
+                />
+              </motion.div>
             ))}
           </div>
+
           <div className="mt-32 flex flex-wrap items-center">
-            <div className="mx-auto -mt-8 w-full px-4 md:w-5/12">
+            <motion.div 
+              className="mx-auto -mt-8 w-full px-4 md:w-5/12"
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 1, delay: 0.5 }}
+            >
               <div className="mb-6 inline-flex h-16 w-16 items-center justify-center rounded-full bg-[#14B8A6] p-2 text-center shadow-lg">
                 <HomeIcon className="h-8 w-8 text-white"/>
               </div>
@@ -70,8 +92,14 @@ export function Home() {
                 Let us make homeownership easy and stress-free for you.
               </Typography>
               <Button variant="filled">Learn More</Button>
-            </div>
-            <div className="mx-auto mt-24 flex w-full justify-center px-4 md:w-4/12 lg:mt-0">
+            </motion.div>
+
+            <motion.div 
+              className="mx-auto mt-24 flex w-full justify-center px-4 md:w-4/12 lg:mt-0"
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 1, delay: 0.7 }}
+            >
               <Card className="shadow-lg border shadow-gray-500/10 rounded-lg">
                 <CardHeader floated={false} className="relative h-56">
                   <img
@@ -91,35 +119,36 @@ export function Home() {
                   </Typography>
                 </CardBody>
               </Card>
-            </div>
+            </motion.div>
           </div>
-
         </div>
       </section>
+
       <section className="px-4 pt-20 pb-48">
         <div className="container mx-auto">
           <PageTitle section="Our Experts" heading="Meet Our Mortgage Specialists">
             Our experienced mortgage advisors are here to guide you every step of the way. From loan applications to securing the best rates, we ensure a smooth and transparent home-buying journey.
           </PageTitle>
           <div className="mt-24 grid grid-cols-1 gap-12 gap-x-24 md:grid-cols-2 xl:grid-cols-4">
-            {teamData.map(({ img, name, position, socials }) => (
-              <TeamCard
-                key={name}
-                img={img}
-                name={name}
-                position={position}
-                socials={
-                  <div className="flex items-center gap-2">
-                    {socials.map(({ color, name }) => (
-                      <IconButton key={name} color={color} variant="text">
-                        <i className={`fa-brands text-xl fa-${name}`} />
-                      </IconButton>
-                    ))}
-                  </div>
-                }
-              />
+  {teamData.map(({ img, name, position, socials }) => (
+   
+      <TeamCard
+        img={img}
+        name={name}
+        position={position}
+        socials={
+          <div className="flex items-center gap-2">
+            {socials.map(({ color, name }) => (
+              <IconButton key={name} color={color} variant="text">
+                <i className={`fa-brands text-xl fa-${name}`} />
+              </IconButton>
             ))}
           </div>
+        }
+      />
+  ))}
+</div>
+
         </div>
       </section>
 
@@ -130,24 +159,30 @@ export function Home() {
           </PageTitle>
           <div className="mx-auto mt-20 mb-48 grid max-w-5xl grid-cols-1 gap-16 md:grid-cols-2 lg:grid-cols-3">
             {contactData.map(({ title, icon, description }) => (
-              <Card
+              <motion.div
                 key={title}
-                color="transparent"
-                shadow={false}
-                className="text-center text-blue-gray-900"
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
               >
-                <div className="mx-auto mb-6 grid h-14 w-14 place-items-center rounded-full bg-blue-gray-900 shadow-lg shadow-gray-500/20">
-                  {React.createElement(icon, {
-                    className: "w-5 h-5 text-white",
-                  })}
-                </div>
-                <Typography variant="h5" color="blue-gray" className="mb-2 whitespace-nowrap">
-                  {title}
-                </Typography>
-                <Typography className="font-normal text-blue-gray-500">
-                  {description}
-                </Typography>
-              </Card>
+                <Card
+                  color="transparent"
+                  shadow={false}
+                  className="text-center text-blue-gray-900"
+                >
+                  <div className="mx-auto mb-6 grid h-14 w-14 place-items-center rounded-full bg-blue-gray-900 shadow-lg shadow-gray-500/20">
+                    {React.createElement(icon, {
+                      className: "w-5 h-5 text-white",
+                    })}
+                  </div>
+                  <Typography variant="h5" color="blue-gray" className="mb-2 whitespace-nowrap">
+                    {title}
+                  </Typography>
+                  <Typography className="font-normal text-blue-gray-500">
+                    {description}
+                  </Typography>
+                </Card>
+              </motion.div>
             ))}
           </div>
 
@@ -187,9 +222,9 @@ export function Home() {
               Request a Consultation
             </Button>
           </form>
-
         </div>
       </section>
+
       <div className="bg-white">
         <Footer />
       </div>
