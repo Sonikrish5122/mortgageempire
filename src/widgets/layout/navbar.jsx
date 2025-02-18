@@ -45,9 +45,8 @@ export function Navbar({ brandName, routes, action }) {
               <a
                 href={href}
                 target={target}
-                className={`flex items-center gap-1 p-1 font-bold relative ${
-                  isActive ? "text-yellow-400" : ""
-                }`}
+                className={`flex items-center gap-1 p-1 font-bold relative ${isActive ? "text-yellow-400" : ""
+                  }`}
                 onClick={handleNavClick}
               >
                 {icon &&
@@ -71,9 +70,8 @@ export function Navbar({ brandName, routes, action }) {
               <Link
                 to={path}
                 target={target}
-                className={`flex items-center gap-1 p-1 font-bold relative ${
-                  isActive ? "text-yellow-400" : ""
-                }`}
+                className={`flex items-center gap-1 p-1 font-bold relative ${isActive ? "text-yellow-400" : ""
+                  }`}
                 onClick={handleNavClick}
               >
                 {icon &&
@@ -109,7 +107,7 @@ export function Navbar({ brandName, routes, action }) {
           </Typography>
         </Link>
         <div className="hidden lg:flex">{navList}</div>
-        <div className="hidden lg:flex"> 
+        <div className="hidden lg:flex">
           {React.cloneElement(action, {
             className: "hidden lg:inline-block",
           })}

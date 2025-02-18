@@ -11,7 +11,7 @@ import {
   Textarea,
   Checkbox,
 } from "@material-tailwind/react";
-import { FingerPrintIcon, HomeIcon, UsersIcon } from "@heroicons/react/24/solid";
+import { HomeIcon } from "@heroicons/react/24/solid";
 import { PageTitle, Footer } from "@/widgets/layout";
 import { FeatureCard, TeamCard } from "@/widgets/cards";
 import { featuresData, teamData, contactData } from "@/data";
@@ -25,18 +25,18 @@ export function Home() {
         <div className="max-w-8xl container relative mx-auto">
           <div className="flex flex-wrap items-center">
             <div className="ml-auto mr-auto w-full px-4 text-center lg:w-8/12">
-              <motion.div 
-                initial={{ opacity: 0, y: -50 }} 
-                animate={{ opacity: 1, y: 0 }} 
+              <motion.div
+                initial={{ opacity: 0, y: -50 }}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1 }}
               >
                 <Typography variant="h1" color="white" className="mb-6 font-black">
                   Your home ownership journey starts with us.
                 </Typography>
               </motion.div>
-              <motion.div 
-                initial={{ opacity: 0, y: -30 }} 
-                animate={{ opacity: 1, y: 0 }} 
+              <motion.div
+                initial={{ opacity: 0, y: -30 }}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1, delay: 0.3 }}
               >
                 <Typography variant="lead" color="white" className="opacity-80">
@@ -71,14 +71,14 @@ export function Home() {
           </div>
 
           <div className="mt-32 flex flex-wrap items-center">
-            <motion.div 
+            <motion.div
               className="mx-auto -mt-8 w-full px-4 md:w-5/12"
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 1, delay: 0.5 }}
             >
               <div className="mb-6 inline-flex h-16 w-16 items-center justify-center rounded-full bg-[#14B8A6] p-2 text-center shadow-lg">
-                <HomeIcon className="h-8 w-8 text-white"/>
+                <HomeIcon className="h-8 w-8 text-white" />
               </div>
               <Typography variant="h3" className="mb-3 font-bold" color="blue-gray">
                 Mortgage Made Simple
@@ -94,7 +94,7 @@ export function Home() {
               <Button variant="filled">Learn More</Button>
             </motion.div>
 
-            <motion.div 
+            <motion.div
               className="mx-auto mt-24 flex w-full justify-center px-4 md:w-4/12 lg:mt-0"
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
@@ -130,24 +130,24 @@ export function Home() {
             Our experienced mortgage advisors are here to guide you every step of the way. From loan applications to securing the best rates, we ensure a smooth and transparent home-buying journey.
           </PageTitle>
           <div className="mt-24 grid grid-cols-1 gap-12 gap-x-24 md:grid-cols-2 xl:grid-cols-4">
-  {teamData.map(({ img, name, position, socials }) => (
-   
-      <TeamCard
-        img={img}
-        name={name}
-        position={position}
-        socials={
-          <div className="flex items-center gap-2">
-            {socials.map(({ color, name }) => (
-              <IconButton key={name} color={color} variant="text">
-                <i className={`fa-brands text-xl fa-${name}`} />
-              </IconButton>
+            {teamData.map(({ img, name, position, socials }) => (
+
+              <TeamCard
+                img={img}
+                name={name}
+                position={position}
+                socials={
+                  <div className="flex items-center gap-2">
+                    {socials.map(({ color, name }) => (
+                      <IconButton key={name} color={color} variant="text">
+                        <i className={`fa-brands text-xl fa-${name}`} />
+                      </IconButton>
+                    ))}
+                  </div>
+                }
+              />
             ))}
           </div>
-        }
-      />
-  ))}
-</div>
 
         </div>
       </section>

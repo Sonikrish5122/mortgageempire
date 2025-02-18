@@ -16,18 +16,18 @@ export function HomeBuyer() {
                 <div className="max-w-8xl container relative mx-auto">
                     <div className="flex flex-wrap items-center">
                         <div className="mx-auto w-full px-4 text-center lg:w-8/12">
-                            <motion.div 
-                                initial={{ opacity: 0, y: -50 }} 
-                                animate={{ opacity: 1, y: 0 }} 
+                            <motion.div
+                                initial={{ opacity: 0, y: -50 }}
+                                animate={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 1 }}
                             >
                                 <Typography variant="h1" color="white" className="mb-6 font-black">
                                     Becoming a First Home Buyer
                                 </Typography>
                             </motion.div>
-                            <motion.div 
-                                initial={{ opacity: 0, y: -30 }} 
-                                animate={{ opacity: 1, y: 0 }} 
+                            <motion.div
+                                initial={{ opacity: 0, y: -30 }}
+                                animate={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 1, delay: 0.3 }}
                             >
                                 <Typography variant="lead" color="white" className="opacity-80 mb-4">
@@ -35,9 +35,9 @@ export function HomeBuyer() {
                                     We’re here to help with expert guidance, loan comparisons, and tailored solutions.
                                 </Typography>
                             </motion.div>
-                            <motion.div 
-                                initial={{ opacity: 0, y: -30 }} 
-                                animate={{ opacity: 1, y: 0 }} 
+                            <motion.div
+                                initial={{ opacity: 0, y: -30 }}
+                                animate={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 1, delay: 0.5 }}
                             >
                                 <Typography variant="lead" color="white" className="opacity-80 mb-4">
@@ -45,9 +45,9 @@ export function HomeBuyer() {
                                     variety of products available from Australia’s leading lending institutions.
                                 </Typography>
                             </motion.div>
-                            <motion.div 
-                                initial={{ opacity: 0, y: -30 }} 
-                                animate={{ opacity: 1, y: 0 }} 
+                            <motion.div
+                                initial={{ opacity: 0, y: -30 }}
+                                animate={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 1, delay: 0.7 }}
                             >
                                 <Typography variant="lead" color="white" className="opacity-80 mb-4">
@@ -67,17 +67,16 @@ export function HomeBuyer() {
                 <div className="container mx-auto">
                     <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
                         {FirstHomeBuyerGuide.map(({ color, title, icon, description }) => (
-                            
-                                <FeatureCard
-                                    color={color}
-                                    title={title}
-                                    icon={React.createElement(icon, {
-                                        className: "w-5 h-5 text-white",
-                                    })}
-                                    description={description}
-                                    cardClassName='shadow-gray-500'
-                                />
-                           
+                            <FeatureCard
+                                color={color}
+                                title={title}
+                                icon={React.createElement(icon, {
+                                    className: "w-5 h-5 text-white",
+                                })}
+                                description={description}
+                                cardClassName='shadow-gray-500'
+                            />
+
                         ))}
                     </div>
                 </div>
@@ -85,18 +84,18 @@ export function HomeBuyer() {
 
             <section className="mt-32 bg-white px-6 pb-20 pt-6">
                 <div className="text-center mb-12">
-                    <motion.div 
-                        initial={{ opacity: 0 }} 
-                        animate={{ opacity: 1 }} 
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
                         transition={{ duration: 1 }}
                     >
                         <Typography variant="h1" color="black" className="font-black text-3xl md:text-4xl">
                             A General First Home Buyer FAQ Guide
                         </Typography>
                     </motion.div>
-                    <motion.div 
-                        initial={{ opacity: 0 }} 
-                        animate={{ opacity: 1 }} 
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
                         transition={{ duration: 1, delay: 0.2 }}
                     >
                         <Typography variant="lead" color="black" className="opacity-70 mt-2">
@@ -107,18 +106,19 @@ export function HomeBuyer() {
                 <div className="max-w-7xl container mx-auto">
                     <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
                         {FirstHomeBuyerGuide.map(({ color, title, icon, description }) => (
-                                <FeatureCard
-                                    color={color}
-                                    title={title}
-                                    icon={React.createElement(icon, {
-                                        className: "w-5 h-5 text-white",
-                                    })}
-                                    description={description}
-                                    cardClassName="shadow-gray-500"
-                                />
+                            <FeatureCard
+                                color={color}
+                                title={title}
+                                icon={React.createElement(icon, {
+                                    className: "w-5 h-5 text-white",
+                                })}
+                                description={description}
+                                cardClassName="shadow-gray-500"
+                            />
                         ))}
                     </div>
                 </div>
+
             </section>
             <div className="bg-white">
                 <Footer />

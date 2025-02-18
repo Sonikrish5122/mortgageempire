@@ -10,9 +10,9 @@ function App() {
     <>
       {!(pathname == '/sign-in' || pathname == '/sign-up') && (
         <div className="absolute left-0 top-0 w-full z-20 p-4 flex justify-center">
-        <Navbar routes={routes} className="w-full max-w-7xl" />
-      </div>      
-      
+          <Navbar routes={routes} className="w-full max-w-7xl" />
+        </div>
+
       )
       }
       <Routes>

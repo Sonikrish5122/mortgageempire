@@ -105,7 +105,7 @@ Footer.defaultProps = {
     },
   ],
   copyright: (
-    <> 
+    <>
       Copyright © {year} Your Mortgage Company. All Rights Reserved.
     </>
   ),
