@@ -1,8 +1,15 @@
 import PropTypes from "prop-types";
 import { Card, CardBody, Typography, IconButton } from "@material-tailwind/react";
+import { motion } from "framer-motion";
 
 export function ServiceCard({ image, color, icon, title, description, features, cardClassName }) {
     return (
+        <motion.div
+        initial={{ opacity: 0, y: 50 }} 
+        animate={{ opacity: 1, y: 0 }}  
+        transition={{ duration: 0.8 }}  
+        className="flex flex-col h-full"
+      >
         <Card 
             className={`rounded-lg shadow-lg shadow-gray-500/10 transition-transform duration-300 hover:scale-105 hover:shadow-xl ${cardClassName}`}
         >
@@ -35,6 +42,8 @@ export function ServiceCard({ image, color, icon, title, description, features, 
                 </ul>
             </CardBody>
         </Card>
+    </motion.div>
+
     );
 }
 

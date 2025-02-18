@@ -5,10 +5,17 @@ import {
   Typography,
   IconButton,
 } from "@material-tailwind/react";
+import { motion } from "framer-motion";
 
 export function FeatureCard({ color, icon, title, description, cardClassName}) {
   return (
-    <Card className={`rounded-lg shadow-lg shadow-gray-500/10 ${cardClassName}`}>
+    <motion.div
+      initial={{ opacity: 0, y: 50 }} 
+      animate={{ opacity: 1, y: 0 }}  
+      transition={{ duration: 0.8 }}  
+      className="flex flex-col h-full"
+    >
+    <Card className={`h-[250px] rounded-lg shadow-lg shadow-gray-500/10 ${cardClassName}`}>
       <CardBody className="px-8 text-center">
         <IconButton
           variant="gradient"
@@ -26,6 +33,7 @@ export function FeatureCard({ color, icon, title, description, cardClassName}) {
         </Typography>
       </CardBody>
     </Card>
+    </motion.div>
   );
 }
 
