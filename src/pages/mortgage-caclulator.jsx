@@ -71,6 +71,8 @@ const MortgageCalculator = () => {
                                                         placeholder="Enter amount"
                                                         value={loanAmount}
                                                         onChange={(e) => setLoanAmount(Number(e.target.value))}
+                                                        className="custom-input"
+                                                        labelProps={{ className: "custom-label" }}
                                                     />
                                                 </div>
 
@@ -88,7 +90,13 @@ const MortgageCalculator = () => {
                                                             onChange={(e) => setInterestRate((e.target.value / (100 / 19)) + 1)}
                                                             className="w-full"
                                                         />
-                                                        <Input type="number" value={interestRate} readOnly className="w-16 text-center border-gray-300" />
+                                                        <Input
+                                                            type="number"
+                                                            value={interestRate}
+                                                            readOnly
+                                                            className="custom-input w-16 text-center border-gray-300"
+                                                            labelProps={{ className: "custom-label" }}
+                                                        />
                                                     </div>
                                                 </div>
 
@@ -106,7 +114,10 @@ const MortgageCalculator = () => {
                                                             onChange={(e) => setLoanDuration(Math.round(e.target.value / (100 / 29)) + 1)}
                                                             className="w-full"
                                                         />
-                                                        <Input type="number" value={loanDuration} readOnly className="w-16 text-center border-gray-300" />
+                                                        <Input type="number" value={loanDuration} readOnly
+                                                            className="custom-input w-16 text-center border-gray-300"
+                                                            labelProps={{ className: "custom-label" }}
+                                                        />
                                                     </div>
                                                 </div>
                                             </div>

@@ -1,0 +1,24 @@
+/* global.css */
+.custom-input {
+    appearance: none !important;
+    border-top-color: #B0BEC5 !important;
+    color: #78909C !important;
+    opacity: 1 !important;
+}
+
+.custom-input:focus {
+    border-top-color: #263238 !important;
+}
+
+.custom-input::-webkit-inner-spin-button {
+    appearance: none !important;
+}
+
+.custom-input::-webkit-outer-spin-button {
+    appearance: none !important;
+}
+
+.custom-label::before,
+.custom-label::after {
+    content: none !important;
+}
