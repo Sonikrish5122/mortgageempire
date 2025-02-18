@@ -44,6 +44,7 @@ export function HomeBuyer() {
                 <div className="container mx-auto">
                     <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
                         {FirstHomeBuyerGuide.map(({ color, title, icon, description }) => (
+<<<<<<< Updated upstream
                             <FeatureCard
                                 key={title}
                                 color={color}
@@ -54,6 +55,19 @@ export function HomeBuyer() {
                                 description={description}
                                 cardClassName='shadow-gray-500'
                             />
+=======
+                            
+                                <FeatureCard
+                                    color={color}
+                                    title={title}
+                                    icon={React.createElement(icon, {
+                                        className: "w-5 h-5 text-white",
+                                    })}
+                                    description={description}
+                                    cardClassName='shadow-gray-500'
+                                />
+                           
+>>>>>>> Stashed changes
                         ))}
                     </div>
                 </div>
@@ -71,6 +85,7 @@ export function HomeBuyer() {
                 <div className="max-w-7xl container mx-auto">
                     <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
                         {FirstHomeBuyerGuide.map(({ color, title, icon, description }) => (
+<<<<<<< Updated upstream
                             <FeatureCard
                                 key={title}
                                 color={color}
@@ -81,6 +96,17 @@ export function HomeBuyer() {
                                 description={description}
                                 cardClassName="shadow-gray-500"
                             />
+=======
+                                <FeatureCard
+                                    color={color}
+                                    title={title}
+                                    icon={React.createElement(icon, {
+                                        className: "w-5 h-5 text-white",
+                                    })}
+                                    description={description}
+                                    cardClassName="shadow-gray-500"
+                                />
+>>>>>>> Stashed changes
                         ))}
                     </div>
                 </div>
