@@ -15,13 +15,15 @@ export function FeatureCard({ color, icon, title, description, cardClassName }) 
       transition={{ duration: 0.8 }}
       className="flex flex-col h-full"
     >
-      <Card className={`h-[250px] rounded-lg shadow-lg shadow-gray-500/10 ${cardClassName}`}>
+      <Card
+        className={`h-[250px] rounded-lg shadow-lg shadow-gray-500/10 ${cardClassName} transition-transform transform hover:scale-105 hover:shadow-2xl`}
+      >
         <CardBody className="px-8 text-center">
           <IconButton
             variant="gradient"
             size="lg"
             color={color}
-            className="pointer-events-none mb-6 rounded-full"
+            className="pointer-events-none mb-6 rounded-full transition-transform transform hover:scale-110"
           >
             {icon}
           </IconButton>

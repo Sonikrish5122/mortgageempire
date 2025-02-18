@@ -10,13 +10,17 @@ export function TeamCard({ img, name, position, socials }) {
       transition={{ duration: 0.8 }}
       className="flex flex-col h-full"
     >
-      <Card color="transparent" shadow={false} className="text-center">
+      <Card
+        color="transparent"
+        shadow={false}
+        className="text-center transition-transform transform hover:scale-105"
+      >
         <Avatar
           src={img}
           alt={name}
           size="xxl"
           variant="rounded"
-          className="h-[250px] w-full shadow-lg shadow-gray-500/25"
+          className="h-[250px] w-full shadow-lg shadow-gray-500/25 transition-all transform hover:scale-110"
         />
         <Typography variant="h5" color="blue-gray" className="mt-6 mb-1">
           {name}

@@ -85,7 +85,6 @@ export function Services() {
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 1, delay: 0.3 }}
-                                whileHover={{ scale: 1.05 }}
                             >
                                 <ServiceCard
                                     image={image}

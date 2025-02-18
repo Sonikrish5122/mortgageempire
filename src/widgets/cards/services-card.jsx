@@ -38,12 +38,10 @@ export function ServiceCard({ image, color, icon, title, description, features, 
                                 <span className="text-green-500 font-bold text-lg transition-transform duration-200 hover:scale-125">✔</span> {line}
                             </li>
                         ))}
-
                     </ul>
                 </CardBody>
             </Card>
         </motion.div>
-
     );
 }
 
